@@ -1,1 +1,55 @@
 @import "bulma";
+
+/* colores */
+
+$negro: #242423;
+$gris-oscuro: #333533;
+$amarillo: #f5cb5c;
+$blanco: #e8eddf;
+$gris-claro: #cfdbd5;
+
+/* general */
+
+html,
+body {
+    background-color: $gris-oscuro;
+    margin: 0;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+em,
+i {
+    padding: 9px 0 0 9px;
+    color: $gris-claro;
+}
+
+
+/* navbar */
+
+.link-color {
+    color: $blanco;
+}
+
+.is-negro {
+    background-color: $negro;
+}
+
+#logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: $blanco;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 9px 0px 0px 9px;
+    font-weight: bold;
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}
