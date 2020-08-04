@@ -1,0 +1,28 @@
+
+
+<%= form_with(model: @user, local: true) do |f| %>
+    <% # render 'shared/error_messages', object: f.object %>
+    <div>
+        <div class="field" >
+            <%= f.label :name, "Nombre", class: "label" %>
+            <%= f.text_field :name, class: 'input', placeholder: "Escribe" %>
+        </div>
+
+        <div class="field">
+            <%= f.label :email, "Correo Electronico", class: "label" %>
+            <%= f.email_field :email, class: 'input', placeholder: "Escribe"%>
+        </div>
+
+        <div class="field">
+            <%= f.label :password, "Contraseña", class: "label" %>
+            <%= f.password_field :password, class: 'input', placeholder: "Escribe" %>
+        </div>
+
+        <div class="field">
+            <%= f.label :password_confirmation, "Confirmacion", class: "label" %>
+            <%= f.password_field :password_confirmation, class: 'input', placeholder: "Escribe" %>
+        </div>
+        
+        <%= f.submit yield(:button_text), class: "button signup-btn long-btn" %>
+    </div>
+<% end %>

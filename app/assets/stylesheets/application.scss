@@ -53,3 +53,34 @@ i {
         text-decoration: none;
     }
 }
+
+
+/* buttons */
+
+.signup-btn {
+    font-weight: bold;
+    background-color: $amarillo;
+    border: none;
+}
+
+.long-btn {
+    margin-top: 35px;
+    width: 100%;
+}
+
+
+/* forms */
+
+.center-form {
+    background-color: $negro;
+    padding: 20px;
+    margin: 2% 20%;
+    border-radius: 15px;
+}
+
+.center {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    margin: 20%;
+}
