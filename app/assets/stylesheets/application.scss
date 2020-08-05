@@ -111,3 +111,10 @@ i {
         color: red;
     }
 }
+
+.alert {
+    color: $gris-claro;
+    background-color: #b00f0f;
+    display: flex;
+    justify-content: center;
+}

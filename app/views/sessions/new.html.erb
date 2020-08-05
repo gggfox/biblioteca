@@ -1,0 +1,24 @@
+<% provide(:title, "Ingresar")%>
+<% provide(:button_text, "Ingresa")%>
+
+<div class="center-form">
+    <div class="center-title">
+        <h1 class="form-title">Ingresar</h1>
+    </div>
+    <% #render 'shared/error_messages' %>
+    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+
+        <div class="field">
+            <%= f.label :email, "Correo Electronico", class: "label" %>
+            <%= f.email_field :email, class: 'input', placeholder: "Escribe"%>
+        </div>
+
+        <div class="field">
+            <%= f.label :password, "Contraseña", class: "label" %>
+            <%= f.password_field :password, class: 'input', placeholder: "Escribe" %>
+        </div>
+        
+        <%= f.submit yield(:button_text), class: "button signup-btn long-btn" %>
+<% end %>
+<p>¿Nuevo?,  <%= link_to "¡Registrate!", signup_path %></p>
+</div>

@@ -13,7 +13,6 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bulma-rails', '~> 0.9.0'
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'devise'
 gem 'rails-controller-testing'
 
 

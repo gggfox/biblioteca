@@ -28,24 +28,24 @@
             <%= link_to "Nosotros", about_path,   class: "navbar-item" %>
             <%= link_to "Contacto", contact_path, class: "navbar-item"%>
 
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-                Report an issue
-            </a>
+            <% if logged_in? %>
+                <hr class="navbar-divider">
+                <%= link_to "Cuenta", current_user, class: "navbar-item"%>
+            <% end %>
             </div>
         </div>
         </div>
 
         <div class="navbar-end">
         <div class="navbar-item">
+            <% if logged_in? %>
+                <%= link_to "Salir",      logout_path, class: "button is-light"   %>
+            <% else %>
             <div class="buttons">
-            <%= link_to "Registrate", signup_path, class: "button signup-btn" %>
-
-            <a class="button is-light">
-                Ingresa
-            </a>
-
+                <%= link_to "Registrate", signup_path, class: "button signup-btn" %>
+                <%= link_to "Ingresa",    login_path,  class: "button is-light"   %>    
             </div>
+            <% end %>
         </div>
         </div>
     </div>
