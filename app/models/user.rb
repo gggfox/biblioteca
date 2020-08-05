@@ -9,6 +9,9 @@ class User < ApplicationRecord
                            uniqueness: true
     has_secure_password # converts password_digest into password and password confirmation
     validates      :password, presence: true, length: { minimum: 8 }
+
+
+
     private
 
         def downcase_email
