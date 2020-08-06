@@ -1,6 +1,7 @@
 class User < ApplicationRecord
     before_save    :downcase_email
-    has_many       :reviews, dependent: :destroy
+    has_many       :reviews,  dependent: :destroy
+    has_many       :comments, dependent: :destroy
 
     # Validations
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i

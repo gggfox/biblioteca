@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
     private
 
-        def logeged_in_user
+        def logged_in_user
             unless logged_in?
                 flash[:danger] = "Porfavor ingresa."
                 redirect_to login_url

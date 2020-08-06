@@ -16,7 +16,7 @@ User.create!(name:                  "Example User",
 end
 
 users = User.order(:created_at).take(6)
-50.times do
+30.times do
   title   =  Faker::Lorem.sentence(word_count: 2)
   author  =  Faker::Lorem.sentence(word_count: 2)
   content =  Faker::Lorem.sentence(word_count: 50)
