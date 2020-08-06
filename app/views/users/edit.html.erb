@@ -1,0 +1,10 @@
+<% provide(:title, "Editar Cuenta") %>
+<% provide(:button_text, "Guardar Cambios") %>
+
+<div class="center-form">
+    <%= render 'form' %>
+    <div class="gravatar_edit">
+        <%= gravatar_for @user %>
+        <a href="https://gravatar.com/emails" targat="_blank">Cambiar</a>
+    </div>
+</div>

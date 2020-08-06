@@ -1,5 +1,16 @@
 <% provide(:title, "Todos los usuarios") %>
 
-<ul>    
-    <%= render @users %>
+<h1>All users</h1>
+
+<%= will_paginate @users, renderer: BulmaPagination::Rails, class: "is-rounded is-centered " %>
+
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <%= gravatar_for user, size: 50 %>
+      <%= link_to user.name, user %>
+    </li>
+  <% end %>
 </ul>
+
+<%= will_paginate @users, renderer: BulmaPagination::Rails, class:"is-rounded is-centered" %>

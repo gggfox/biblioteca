@@ -14,7 +14,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bulma-rails', '~> 0.9.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rails-controller-testing'
-
+gem 'faker',        '2.11.0'
+gem 'will_paginate', '3.3.0'
+gem 'will_paginate-bulma'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
