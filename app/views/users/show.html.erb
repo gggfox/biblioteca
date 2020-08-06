@@ -1,7 +1,16 @@
 <% provide(:title, @user.name) %>
 
-            <h1>
-                <%= gravatar_for @user%>
-                <%= @user.name %>
-            </h1>
-            
+<h1>
+    <%= gravatar_for @user%>
+    <%= @user.name %>
+</h1>
+
+<% if @user.reviews.any? %>
+    <h3>Reseñas (<%= @user.reviews.count %>)</h3>
+    <ol class="reviews">
+    <%= render @reviews %>
+    </ol>
+    <%= will_paginate @reviews, renderer: BulmaPagination::Rails, class:"is-rounded is-centered" %>
+<% end %>
+
+        
